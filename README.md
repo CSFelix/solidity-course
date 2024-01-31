@@ -14,3 +14,9 @@ Environments:
 
 - For Lessons 2 and 3: `Remix VM (Merge)` Environment is Enough;
 - For Lesson 4: `Injected Provider - Metamask` Environment is Needed.
+
+---
+
+IDE:
+
+- Remix: https://remix.ethereum.org
