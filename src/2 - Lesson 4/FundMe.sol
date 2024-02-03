@@ -12,6 +12,9 @@ import { PriceConverter } from "./PriceConverter.sol";
 // 826,396 gas // pure
 // 806,445 gas // adding constant keyword
 // 782,878 gas // adding immmutable keyword
+
+error NotOwner();
+
 contract FundMe {
     // ---- Usings ----
     using PriceConverter for uint256; // PriceConverter library is going to be used with uint256 variables
@@ -92,7 +95,24 @@ contract FundMe {
         // _; // if the underscore were here, the code of the function would be executed first and the require condition would be checked later
 
         // Only the owner can withdraw the money from the contracts
-        require(msg.sender == i_owner, "Only the Owner can withdraw the money from the contracts!");
+        // require(msg.sender == i_owner, "Only the Owner can withdraw the money from the contracts!");
+        if (msg.sender != i_owner) { revert NotOwner(); }
+
         _; // execute the code of the function where the keyword is in it
     }
+
+    // Explainer from: https://solidity-by-example.org/fallback/
+    // Ethereum is sent to contract
+    //  is msg.data (calldata) empty?
+    //          /   \ 
+    //         yes  no
+    //         /     \
+    //    receive()?  fallback() 
+    //     /   \ 
+    //   yes   no
+    //  /        \
+    //receive()  fallback()
+    receive() external payable { fund(); }
+
+    fallback() external payable { fund(); }
 }
