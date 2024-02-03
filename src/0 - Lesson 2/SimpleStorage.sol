@@ -23,12 +23,30 @@ contract SimpleStorage {
     */
 
     /*
-        ---- Visibility ----
+        ---- States Visibility ----
+        
+        - internal: the state can only be accessed by the current contract and by the contracts
+    that inherit from the current one;
+        - public: the state can be accessed by any contracts;
+        - private: the state can only be accessed by the current contract.
+    */
 
-        - public: visible externally and internally (creates a getter function for storage/state variables);
-        - private: only visible in the current contract;
-        - external: only visible externally (only for functions);
-        - internal: only visible internally.
+    /*
+        ---- States Keywords ----
+
+        - constant: the state has its value assigned in its creation and cannot be changed;
+        - immutable: the state has its value assigned later, such as in the constructor, and,
+    once the value is set, it cannot be changed.
+    */
+
+    /*
+        ---- Functions Visibility ----
+
+        - external: the function can be accessed by any contracts, except by the current one;
+        - internal: the function can only be accessed by the current contract and by the
+    contracts that inherit from the current one;
+        - public: the function can be accessed by any contracts;
+        - private: the function can only be accessed by the current contract.
     */
     struct Person {
         uint256 favoriteNumber;
