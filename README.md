@@ -10,6 +10,13 @@ Course provided by [Patrick Collins](https://www.youtube.com/@PatrickAlphaC):
 
 ---
 
+Better understanding about Blockchains and Public/Private Keys:
+
+- Blockchain: [Blockchain Demo](https://andersbrownworth.com/blockchain/hash)
+- Public/Private Keys: [Public and Private Keys Demo](https://andersbrownworth.com/blockchain/public-private-keys/signatures)
+
+---
+
 Environments:
 
 - For Lessons 2 and 3: `Remix VM (Merge)` Environment is Enough;
