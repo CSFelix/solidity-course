@@ -20,7 +20,8 @@ Better understanding about Blockchains and Public/Private Keys:
 Environments:
 
 - For Lessons 2 and 3: `Remix VM (Merge)` Environment is Enough;
-- For Lesson 4: `Injected Provider - Metamask` Environment is Needed.
+- For Lesson 4: `Injected Provider - Metamask` Environment is Needed;
+- For Lesson 6: `Visual Studio and Foundry` Environment is Needed. Also follow the instructions on `notes/0 - Foundry Notes.md`.
 
 ---
 
